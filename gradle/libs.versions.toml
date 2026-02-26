@@ -12,6 +12,7 @@ retrofit = "2.11.0"
 okhttp = "4.12.0"
 room = "2.7.1"
 coroutines = "1.9.0"
+hilt = "2.52"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -27,7 +28,8 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-
+#navigation
+androidx-navigation-compose ={ group="androidx.navigation",name="navigation-compose" }
 # libraries
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
@@ -37,8 +39,18 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 
+
+
+#hilt
+dagger-hilt={module="com.google.dagger:hilt-android",version.ref="hilt"}
+
+dagger-kapt={module="com.google.dagger:hilt-android-compiler",version.ref="hilt"}
+
+hilt-compose-navigation={ module="androidx.hilt:hilt-navigation-compose",version="1.2.0"}
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
+dagger={ id = "com.google.dagger.hilt.android",version="2.50"}
