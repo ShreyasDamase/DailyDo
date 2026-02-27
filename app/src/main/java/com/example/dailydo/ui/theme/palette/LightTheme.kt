@@ -1,99 +1,203 @@
 package com.example.dailydo.ui.theme.palette
 
- import androidx.compose.material3.lightColorScheme
-
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import com.example.dailydo.ui.theme.tokens.AppColors
 
-/**
- * Auto-generated from light.json
- * Palette: light · DO NOT EDIT — regenerate from Token Studio
- */
-
-// M3 Color Scheme
- import com.example.dailydo.ui.theme.tokens.AppColors
-
-val LightColorScheme = lightColorScheme(
-
-    // ── Brand ─────────────────────────────
-    primary = AppColors.Pink500,
-    onPrimary = AppColors.White,
-    primaryContainer = AppColors.Pink50,
-    onPrimaryContainer = AppColors.Pink500,
-
-    secondary = AppColors.PinkBrand,
-    onSecondary = AppColors.White,
-    secondaryContainer = AppColors.Pink50,
-    onSecondaryContainer = AppColors.PinkBrand,
-
-    tertiary = AppColors.PinkBrand,
-    onTertiary = AppColors.White,
-    tertiaryContainer = AppColors.Pink50,
-    onTertiaryContainer = AppColors.Black,
-
-    // ── Status ────────────────────────────
-    error = AppColors.Rose500,
-    onError = AppColors.White,
-    errorContainer = AppColors.Pink50,
-    onErrorContainer = AppColors.Rose500,
-
-    // ── Background / Surface ──────────────
-    background = AppColors.White,
-    onBackground = AppColors.Black,
-
-    surface = AppColors.White,
-    onSurface = AppColors.Black,
-
-    surfaceVariant = AppColors.White,
-    onSurfaceVariant = AppColors.Slate900,
-
-    // ── Outline / Divider ─────────────────
-    outline = AppColors.Slate100,
-    outlineVariant = AppColors.Pink50Soft,
-
-    // ── Inverse ───────────────────────────
-    inverseSurface = AppColors.Slate900,
-    inverseOnSurface = AppColors.White,
-    inversePrimary = AppColors.Pink300,
-
-    // ── Material 3 extras ─────────────────
-    surfaceTint = AppColors.Pink500,
-    scrim = AppColors.Black,
-
-    surfaceBright = AppColors.White,
-    surfaceDim = AppColors.Slate100,
-
-    surfaceContainerLowest = AppColors.White,
-    surfaceContainerLow = AppColors.Slate100,
-    surfaceContainer = AppColors.White,
-    surfaceContainerHigh = AppColors.White,
-    surfaceContainerHighest = AppColors.Pink50,
-)
-// Extended / Custom Colors
+// =====================
+// ROOT TOKEN CONTAINER
+// =====================
 @Immutable
-data class LightExtendedColors(
-    val success:         Color,
-    val onSuccess:       Color,
-    val warning:         Color,
-    val onWarning:       Color,
-    val info:            Color,
-    val onInfo:          Color,
-    val cardPrimary:     Color,
-    val cardMuted:       Color,
-    val cardAccent:      Color,
+data class AppColorTokens(
+    val bg: BgTokens,
+    val surface: SurfaceTokens,
+    val text: TextTokens,
+    val border: BorderTokens,
+    val icon: IconTokens,
+    val brand: BrandTokens,
+    val status: StatusTokens,
+    val card: CardTokens,
 )
 
-val LightExtended = LightExtendedColors(
-    success     = Color(0xFF10B981),
-    onSuccess   = Color.White,
-    warning     = Color(0xFFF59E0B),
-    onWarning   = Color.White,
-    info        = Color(0xFF3B82F6),
-    onInfo      = Color.White,
-    cardPrimary = Color(0xFFFDF2F8),
-    cardMuted   = Color(0xFFFFFFFF),
-    cardAccent  = Color(0xFFF4257B),
+// ---------------------
+// BG
+// ---------------------
+@Immutable
+data class BgTokens(
+    val primary: Color,
+    val secondary: Color,
+    val tertiary: Color,
+    val inverse: Color,
 )
 
-val LocalLightExtended = staticCompositionLocalOf { LightExtended }
+// ---------------------
+// SURFACE
+// ---------------------
+@Immutable
+data class SurfaceTokens(
+    val default: Color,
+    val raised: Color,
+    val overlay: Color,
+    val pressed: Color,
+    val disabled: Color,
+)
+
+// ---------------------
+// TEXT
+// ---------------------
+@Immutable
+data class TextTokens(
+    val primary: Color,
+    val secondary: Color,
+    val tertiary: Color,
+    val muted: Color,
+    val disabled: Color,
+    val inverse: Color,
+    val brand: Color,
+    val darkPink: Color,
+    val pinkLight: Color,
+)
+
+// ---------------------
+// BORDER
+// ---------------------
+@Immutable
+data class BorderTokens(
+    val default: Color,
+    val strong: Color,
+    val muted: Color,
+    val brand: Color,
+    val disabled: Color,
+    val error: Color,
+    val light: Color,
+)
+
+// ---------------------
+// ICON
+// ---------------------
+@Immutable
+data class IconTokens(
+    val primary: Color,
+    val secondary: Color,
+    val tertiary: Color,
+    val dark: Color,
+    val muted: Color,
+    val disabled: Color,
+    val inverse: Color,
+)
+
+// ---------------------
+// BRAND
+// ---------------------
+@Immutable
+data class BrandTokens(
+    val default: Color,
+    val pressed: Color,
+    val disabled: Color,
+    val muted: Color,
+    val light: Color,
+)
+
+// ---------------------
+// STATUS
+// ---------------------
+@Immutable
+data class StatusTokens(
+    val success: StatusPair,
+    val error: StatusPair,
+    val warning: StatusPair,
+    val info: StatusPair,
+)
+
+@Immutable
+data class StatusPair(
+    val default: Color,
+    val muted: Color,
+)
+
+// ---------------------
+// CARD
+// ---------------------
+@Immutable
+data class CardTokens(
+    val primary: Color,
+    val mute: Color,
+    val dark: Color,
+)
+
+// =====================
+// LIGHT TOKEN MAPPING
+// =====================
+val LightTokens = AppColorTokens(
+
+    bg = BgTokens(
+        primary = AppColors.White,
+        secondary = AppColors.Pink50,
+        tertiary = AppColors.Slate100,
+        inverse = AppColors.Slate900,
+    ),
+
+    surface = SurfaceTokens(
+        default = AppColors.White,
+        raised = AppColors.White,
+        overlay = AppColors.Slate900,
+        pressed = AppColors.Pink50,
+        disabled = AppColors.Transparent,
+    ),
+
+    text = TextTokens(
+        primary = AppColors.Black,
+        secondary = AppColors.Slate900,
+        tertiary = AppColors.Slate500,
+        muted = AppColors.Slate400,
+        disabled = AppColors.Transparent,
+        inverse = AppColors.White,
+        brand = AppColors.PinkBrand,
+        darkPink = AppColors.Pink900,
+        pinkLight = AppColors.Pink300,
+    ),
+
+    border = BorderTokens(
+        default = AppColors.Slate100,
+        strong = AppColors.Slate200,
+        muted = AppColors.Pink50Soft,
+        brand = AppColors.Pink500,
+        disabled = AppColors.Transparent,
+        error = AppColors.Transparent,
+        light = AppColors.Pink50Soft,
+    ),
+
+    icon = IconTokens(
+        primary = AppColors.Pink300,
+        secondary = AppColors.White,
+        tertiary = AppColors.Pink50,
+        dark = AppColors.PinkBrand,
+        muted = AppColors.Slate400,
+        disabled = AppColors.Transparent,
+        inverse = AppColors.Transparent,
+    ),
+
+    brand = BrandTokens(
+        default = AppColors.Pink500,
+        pressed = AppColors.Pink300,
+        disabled = AppColors.Transparent,
+        muted = AppColors.Pink50,
+        light = AppColors.White,
+    ),
+
+    status = StatusTokens(
+        success = StatusPair(AppColors.Green500, AppColors.Green100),
+        error = StatusPair(AppColors.Rose500, AppColors.Transparent),
+        warning = StatusPair(AppColors.Amber400, AppColors.Orange100),
+        info = StatusPair(AppColors.Blue500, AppColors.Blue100),
+    ),
+
+    card = CardTokens(
+        primary = AppColors.Pink50,
+        mute = AppColors.White,
+        dark = AppColors.PinkBrand,
+    ),
+)
+
+val LocalAppTokens = staticCompositionLocalOf { LightTokens }

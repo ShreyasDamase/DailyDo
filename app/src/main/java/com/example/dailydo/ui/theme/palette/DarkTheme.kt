@@ -1,100 +1,113 @@
 package com.example.dailydo.ui.theme.palette
 
- import androidx.compose.material3.darkColorScheme
- import androidx.compose.runtime.Immutable
-import androidx.compose.runtime.staticCompositionLocalOf
-import androidx.compose.ui.graphics.Color
-
-/**
- * Auto-generated from dark.json
- * Palette: dark · DO NOT EDIT — regenerate from Token Studio
- */
-
-// M3 Color Scheme
-
 import com.example.dailydo.ui.theme.tokens.AppColors
 
-val DarkColorScheme = darkColorScheme(
+// =====================
+// DARK TOKEN MAPPING
+// =====================
+val DarkTokens = AppColorTokens(
 
-    // ── Brand ─────────────────────────────
-    primary = AppColors.Pink500,
-    onPrimary = AppColors.White,
-    primaryContainer = AppColors.Slate800,
-    onPrimaryContainer = AppColors.Pink500,
+    // ---------------------
+    // BG
+    // ---------------------
+    bg = BgTokens(
+        primary = AppColors.Slate950,
+        secondary = AppColors.Slate900,
+        tertiary = AppColors.Slate800,
+        inverse = AppColors.White,
+    ),
 
-    secondary = AppColors.PinkBrand,
-    onSecondary = AppColors.White,
-    secondaryContainer = AppColors.Slate800,
-    onSecondaryContainer = AppColors.PinkBrand,
+    // ---------------------
+    // SURFACE
+    // ---------------------
+    surface = SurfaceTokens(
+        default = AppColors.Slate900,
+        raised = AppColors.Slate800,
+        overlay = AppColors.Slate950,
+        pressed = AppColors.Slate800,
+        disabled = AppColors.Transparent,
+    ),
 
-    tertiary = AppColors.PinkBrand,
-    onTertiary = AppColors.White,
-    tertiaryContainer = AppColors.Slate900,
-    onTertiaryContainer = AppColors.White,
+    // ---------------------
+    // TEXT
+    // ---------------------
+    text = TextTokens(
+        primary = AppColors.White,
+        secondary = AppColors.Slate400,
+        tertiary = AppColors.Slate500,
+        muted = AppColors.Slate600,
+        disabled = AppColors.Transparent,
+        inverse = AppColors.White,
+        brand = AppColors.PinkBrand,
+        darkPink = AppColors.Pink300,
+        pinkLight = AppColors.Pink500,
+    ),
 
-    // ── Status ────────────────────────────
-    error = AppColors.Rose500,
-    onError = AppColors.White,
-    errorContainer = AppColors.Slate900,
-    onErrorContainer = AppColors.Rose500,
+    // ---------------------
+    // BORDER
+    // ---------------------
+    border = BorderTokens(
+        default = AppColors.Slate800,
+        strong = AppColors.Slate700,
+        muted = AppColors.Slate800,
+        brand = AppColors.Pink500,
+        disabled = AppColors.Transparent,
+        error = AppColors.Transparent,
+        light = AppColors.Slate800,
+    ),
 
-    // ── Background / Surface ──────────────
-    background = AppColors.Slate950,
-    onBackground = AppColors.White,
+    // ---------------------
+    // ICON
+    // ---------------------
+    icon = IconTokens(
+        primary = AppColors.Pink300,
+        secondary = AppColors.Slate950, // bg.primary
+        tertiary = AppColors.Slate800,
+        dark = AppColors.PinkBrand,
+        muted = AppColors.Slate600,
+        disabled = AppColors.Transparent,
+        inverse = AppColors.Transparent,
+    ),
 
-    surface = AppColors.Slate900,
-    onSurface = AppColors.White,
+    // ---------------------
+    // BRAND
+    // ---------------------
+    brand = BrandTokens(
+        default = AppColors.Pink500,
+        pressed = AppColors.PinkBrand,
+        disabled = AppColors.Transparent,
+        muted = AppColors.Slate800,
+        light = AppColors.White,
+    ),
 
-    surfaceVariant = AppColors.Slate800,
-    onSurfaceVariant = AppColors.Slate400,
+    // ---------------------
+    // STATUS
+    // ---------------------
+    status = StatusTokens(
+        success = StatusPair(
+            default = AppColors.Green400,
+            muted = AppColors.Green600,
+        ),
+        error = StatusPair(
+            default = AppColors.Rose500,
+            muted = AppColors.Transparent,
+        ),
+        warning = StatusPair(
+            default = AppColors.Amber400,
+            muted = AppColors.Orange600,
+        ),
+        info = StatusPair(
+            default = AppColors.Blue500,
+            muted = AppColors.Blue600,
+        ),
+    ),
 
-    // ── Outline / Divider ─────────────────
-    outline = AppColors.Slate800,
-    outlineVariant = AppColors.Slate800,
-
-    // ── Inverse ───────────────────────────
-    inverseSurface = AppColors.White,
-    inverseOnSurface = AppColors.Slate950,
-    inversePrimary = AppColors.PinkBrand,
-
-    // ── Material 3 extras ─────────────────
-    surfaceTint = AppColors.Pink500,
-    scrim = AppColors.Black,
-
-    surfaceBright = AppColors.Slate800,
-    surfaceDim = AppColors.Slate800,
-
-    surfaceContainerLowest = AppColors.Slate950,
-    surfaceContainerLow = AppColors.Slate800,
-    surfaceContainer = AppColors.Slate900,
-    surfaceContainerHigh = AppColors.Slate800,
-    surfaceContainerHighest = AppColors.Slate900,
+    // ---------------------
+    // CARD
+    // ---------------------
+    card = CardTokens(
+        primary = AppColors.Slate900,
+        mute = AppColors.Slate800,
+        dark = AppColors.PinkBrand,
+    ),
 )
-// Extended / Custom Colors
-@Immutable
-data class DarkExtendedColors(
-    val success:         Color,
-    val onSuccess:       Color,
-    val warning:         Color,
-    val onWarning:       Color,
-    val info:            Color,
-    val onInfo:          Color,
-    val cardPrimary:     Color,
-    val cardMuted:       Color,
-    val cardAccent:      Color,
-)
-
-val DarkExtended = DarkExtendedColors(
-    success     = Color(0xFF22C55E),
-    onSuccess   = Color(0xFF003910),
-    warning     = Color(0xFFF59E0B),
-    onWarning   = Color(0xFF2A1700),
-    info        = Color(0xFF3B82F6),
-    onInfo      = Color(0xFF001E31),
-    cardPrimary = Color(0xFF0F172A),
-    cardMuted   = Color(0xFF1E293B),
-    cardAccent  = Color(0xFFF4257B),
-)
-
-val LocalDarkExtended = staticCompositionLocalOf { DarkExtended }
-

@@ -2,10 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-   alias(libs.plugins.dagger)
+    alias(libs.plugins.dagger)
 
     kotlin("kapt")
-
 
 
 }
@@ -57,16 +56,17 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.kotlinx.coroutines)
-   implementation(libs.dagger.hilt)
+    implementation(libs.dagger.hilt)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp.logging)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     implementation(libs.androidx.navigation.compose)
-  implementation(libs.hilt.compose.navigation)
+    implementation(libs.hilt.compose.navigation)
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.7.0")
 
-   kapt(libs.dagger.kapt)
+    kapt(libs.dagger.kapt)
     kapt(libs.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
