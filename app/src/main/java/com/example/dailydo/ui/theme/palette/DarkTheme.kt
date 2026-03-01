@@ -54,6 +54,8 @@ val DarkTokens = AppColorTokens(
         disabled = AppColors.Transparent,
         error = AppColors.Transparent,
         light = AppColors.Slate800,
+        inActive = AppColors.Slate800
+
     ),
 
     // ---------------------

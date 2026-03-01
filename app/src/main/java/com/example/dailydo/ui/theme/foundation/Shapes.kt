@@ -14,8 +14,8 @@ import androidx.compose.ui.unit.dp
  */
 val AppShapes = Shapes(
     extraSmall = RoundedCornerShape(4.dp),   // tooltips, menus
-    small      = RoundedCornerShape(8.dp),   // chips, text fields
-    medium     = RoundedCornerShape(12.dp),   // cards, small FABs
-    large      = RoundedCornerShape(16.dp),   // large FABs, nav drawer
-    extraLarge = RoundedCornerShape(28.dp)    // M3 baseline default
+    small = RoundedCornerShape(8.dp),   // chips, text fields
+    medium = RoundedCornerShape(12.dp),   // cards, small FABs
+    large = RoundedCornerShape(16.dp),   // large FABs, nav drawer
+    extraLarge = RoundedCornerShape(24.dp),   // M3 baseline default
 )

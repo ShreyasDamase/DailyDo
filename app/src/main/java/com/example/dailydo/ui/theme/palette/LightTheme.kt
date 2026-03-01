@@ -71,6 +71,7 @@ data class BorderTokens(
     val disabled: Color,
     val error: Color,
     val light: Color,
+    val inActive: Color,
 )
 
 // ---------------------
@@ -166,6 +167,7 @@ val LightTokens = AppColorTokens(
         disabled = AppColors.Transparent,
         error = AppColors.Transparent,
         light = AppColors.Pink50Soft,
+        inActive = AppColors.Pink50Alt
     ),
 
     icon = IconTokens(

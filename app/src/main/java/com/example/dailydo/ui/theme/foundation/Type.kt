@@ -24,72 +24,82 @@ private val provider = GoogleFont.Provider(
 private val Inter = FontFamily(
     Font(googleFont = GoogleFont("Inter"), fontProvider = provider, weight = FontWeight.Normal),
     Font(googleFont = GoogleFont("Inter"), fontProvider = provider, weight = FontWeight.Medium),
+    Font(googleFont = GoogleFont("Inter"), fontProvider = provider, weight = FontWeight.SemiBold),
+    Font(googleFont = GoogleFont("Inter"), fontProvider = provider, weight = FontWeight.Bold),
 )
-
 val AppTypography = Typography(
+
+    // ── Display ─────────────────────────────────────
     displayLarge = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Bold,
         fontSize = 57.sp,
         lineHeight = 64.sp,
         letterSpacing = -0.25.sp
     ),
     displayMedium = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 45.sp,
-        lineHeight = 52.sp,
-        letterSpacing = 0.sp
+        lineHeight = 52.sp
     ),
     displaySmall = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 36.sp,
-        lineHeight = 44.sp,
-        letterSpacing = 0.sp
+        lineHeight = 44.sp
     ),
+
+    // ── Headlines ───────────────────────────────────
+    // headlineLarge → screen-level titles (Daily Planner, Daily News, Article headline)
     headlineLarge = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
-        fontSize = 32.sp,
-        lineHeight = 40.sp,
-        letterSpacing = 0.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp,
+        lineHeight = 25.sp
     ),
+    // headlineMedium → section titles (Today's Schedule, Upcoming, Save Task)
     headlineMedium = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
-        fontSize = 28.sp,
-        lineHeight = 36.sp,
-        letterSpacing = 0.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
+        lineHeight = 28.sp
     ),
+    // headlineSmall → Add New Task bottom sheet title
     headlineSmall = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Bold,
         fontSize = 24.sp,
-        lineHeight = 32.sp,
-        letterSpacing = 0.sp
+        lineHeight = 32.sp
     ),
+
+    // ── Titles ──────────────────────────────────────
+    // titleLarge → date header (October 2023)
     titleLarge = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
+        lineHeight = 28.sp
     ),
+    // titleMedium → task name, date value, category chips
     titleMedium = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.15.sp
     ),
+    // titleSmall → TASK TITLE / CATEGORY field labels
     titleSmall = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 14.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.1.sp
     ),
+
+    // ── Body ────────────────────────────────────────
+    // bodyLarge → input fields, placeholder, Tomorrow Oct 24
     bodyLarge = TextStyle(
         fontFamily = Inter,
         fontWeight = FontWeight.Normal,
@@ -97,6 +107,7 @@ val AppTypography = Typography(
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
+    // bodyMedium → article description, quote banner
     bodyMedium = TextStyle(
         fontFamily = Inter,
         fontWeight = FontWeight.Normal,
@@ -104,6 +115,7 @@ val AppTypography = Typography(
         lineHeight = 20.sp,
         letterSpacing = 0.25.sp
     ),
+    // bodySmall → task time, read time, time ago
     bodySmall = TextStyle(
         fontFamily = Inter,
         fontWeight = FontWeight.Normal,
@@ -111,13 +123,17 @@ val AppTypography = Typography(
         lineHeight = 16.sp,
         letterSpacing = 0.4.sp
     ),
+
+    // ── Labels ──────────────────────────────────────
+    // labelLarge → chips (All Tasks/Work), tabs (For You/Trending), article list titles
     labelLarge = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 14.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.1.sp
     ),
+    // labelMedium → MON/TUE day names, story labels, View link, category chips medium
     labelMedium = TextStyle(
         fontFamily = Inter,
         fontWeight = FontWeight.Medium,
@@ -125,11 +141,12 @@ val AppTypography = Typography(
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
     ),
+    // labelSmall → badges (TRENDING/BEAUTY), bottom tab labels
     labelSmall = TextStyle(
         fontFamily = Inter,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
+        fontWeight = FontWeight.Bold,
+        fontSize = 10.sp,
+        lineHeight = 15.sp,
         letterSpacing = 0.5.sp
     )
 )

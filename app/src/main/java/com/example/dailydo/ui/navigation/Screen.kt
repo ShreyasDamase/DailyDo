@@ -1,15 +1,17 @@
 package com.example.dailydo.ui.navigation
 
-import android.icu.text.CaseMap
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
-import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.Search
-import androidx.compose.ui.graphics.vector.ImageVector
+import com.example.dailydo.R
 
-sealed class Screen(val route : String,val icon: ImageVector? ,var title: String) {
-    object Main : Screen("Home", Icons.Rounded.Home, "Home")
-    object Discover : Screen("Discover", Icons.Rounded.Search, "Discover")
-    object Create : Screen("Create", Icons.Rounded.Add, "Create")
+sealed class Screen(val route: String, val icon: Int, var title: String) {
+    object Main : Screen("Home", R.drawable.home, "Home")
+    object Discover : Screen("Discover", R.drawable.discover, "Discover")
+    object Saved : Screen("Saved", R.drawable.save, "Saved")
+
+    object Create : Screen("Create", R.drawable.save, "Create")
+    object Profile : Screen("Profile", R.drawable.profile, "Profile")
+
 
 }
